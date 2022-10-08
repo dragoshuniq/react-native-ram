@@ -27,8 +27,8 @@ const getRam=async()=>{
  console.log(ramInfo)
 }
 
-// ...result example
-// results in MB and %
+// ...result example in MB and %
+
 {
   "appUsedMemory": 12.637718200683594,
   "percentageUsed": 48.736824388734746,
