@@ -1,18 +1,21 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-ram';
+import { getAllRamInfo } from 'react-native-ram';
+import type { RamState } from 'react-native-ram';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<RamState>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    getAllRamInfo().then((res: RamState) => {
+      setResult(res);
+    });
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>RAM INFO: {JSON.stringify(result, null, 2)}</Text>
     </View>
   );
 }
