@@ -1,10 +1,15 @@
 # react-native-ram
+
 A react-native module to get device RAM
+
 ## Installation
+
 #### Using npm:
+
 ```sh
 npm install react-native-ram
 ```
+
 #### or using yarn:
 
 ```sh
@@ -12,6 +17,7 @@ yarn add react-native-ram
 ```
 
 ## Usage
+
 ```js
 import { getAllRamInfo } from "react-native-ram";
 
@@ -42,18 +48,18 @@ const getRam=async()=>{
 
 ## API
 
-| Method                                                | Return Type         |  iOS | Android |
-| ------------------------------------------------------| ------------------- | :--: | :-----: |
-| [getAllRamInfo()](#getallraminfo)                     | `Promise<RamState>` |  ✅  |   ✅    |
-| [getTotalRam()](#gettotalram)                         | `Promise<number>`   |  ✅  |   ✅    |
-| [getUsedRam()](#getusedram)                           | `Promise<number>`   |  ✅  |   ✅    |
-| [getAvailableRam()](#getavailableram)                 | `Promise<number>`   |  ✅  |   ✅    |
-| [getPercentageUsed()](#getpercentageused)             | `Promise<number>`   |  ✅  |   ✅    |
-| [getPercentageAvailable()](#getpercentageavailable)   | `Promise<number>`   |  ✅  |   ✅    |
-| [getAppRamUsed()](#getappramused)                     | `Promise<number>`   |  ✅  |   ❌    |
-
+| Method                                              | Return Type         | iOS | Android |
+| --------------------------------------------------- | ------------------- | :-: | :-----: |
+| [getAllRamInfo()](#getallraminfo)                   | `Promise<RamState>` | ✅  |   ✅    |
+| [getTotalRam()](#gettotalram)                       | `Promise<number>`   | ✅  |   ✅    |
+| [getUsedRam()](#getusedram)                         | `Promise<number>`   | ✅  |   ✅    |
+| [getAvailableRam()](#getavailableram)               | `Promise<number>`   | ✅  |   ✅    |
+| [getPercentageUsed()](#getpercentageused)           | `Promise<number>`   | ✅  |   ✅    |
+| [getPercentageAvailable()](#getpercentageavailable) | `Promise<number>`   | ✅  |   ✅    |
+| [getAppRamUsed()](#getappramused)                   | `Promise<number>`   | ❌  |   ✅    |
 
 ## Type
+
 ```js
 interface RamState {
   percentageAvailable: number;
@@ -64,7 +70,6 @@ interface RamState {
   appUsedMemory?: number;
 }
 ```
-
 
 ## License
 
